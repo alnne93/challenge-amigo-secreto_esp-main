@@ -31,8 +31,19 @@ function actualizarLista() {
     }
 }
 
-// Implementa una función para actualizar la lista de amigos
-function sortear()
+// IImplementa una función para sortear los amigos
+function sortearAmigo(){
+    // Valiar que haya al menos dos amigos
+    if (amigos.length < 2) {
+        alert("Agregar Mas Amigos para sortear");
+        return;
+    }
+    // Sortear amigos
+    const amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    // Mostrar el amigo sorteado    
+    let resultado = document.getElementById("resultado");
+    resultado.textContent = amigoSorteado;
+}
 
 
 // Implementa una función para mostrar amigos
