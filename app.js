@@ -9,7 +9,7 @@ function agregarAmigo() {
     if (nombre !== "" && !amigos.includes(nombre)) {
         amigos.push(nombre);
         // Actualiza lista en html
-        //actualizarLista();
+        actualizarLista();
     }
 
     inputAmigo.value = ""; // Limpiar el campo de entrada
@@ -19,7 +19,7 @@ function agregarAmigo() {
 }
 
 
-// Implementa una función para actualizar la lista de amigos
+// Implementa una función para actualizar la lista de amigos del html
 function actualizarLista() {
     let listaAmigos = document.getElementById("listaAmigos");
     // Limpia contenido de la lista actual
@@ -31,7 +31,7 @@ function actualizarLista() {
     }
 }
 
-// IImplementa una función para sortear los amigos
+// Implementa una función para sortear los amigos
 function sortearAmigo(){
     // Valiar que haya al menos dos amigos
     if (amigos.length < 2) {
@@ -42,9 +42,8 @@ function sortearAmigo(){
     const amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
     // Mostrar el amigo sorteado    
     let resultado = document.getElementById("resultado");
-    resultado.textContent = amigoSorteado;
+    resultado.textContent = `El amigo sorteado es: ${amigoSorteado}`;
 }
 
 
-// Implementa una función para mostrar amigos
 
